@@ -1,0 +1,65 @@
+.resume {
+  max-width: 60%;
+  min-height: 90vh;
+  overflow-y: auto;
+
+  /* margin-left: auto; */
+
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1),
+    0 8px 16px -8px rgba(0, 0, 0, 0.25);
+  /* box-shadow: ; */
+}
+
+/* Resume Header */
+
+.resumeHeader {
+  background-color: #3e504f;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  min-height: 8rem;
+}
+
+.resumeHeader section {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Resume Main */
+
+.resumeMainHeading {
+  color: #283131;
+  background-color: #3e504f30;
+
+  min-height: 2.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumeMain {
+  background-color: white;
+  padding: 3rem 4rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.resumeMainContent div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 1.5rem;
+}
