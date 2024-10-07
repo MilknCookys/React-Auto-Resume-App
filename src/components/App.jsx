@@ -3,7 +3,7 @@ import "../styles/App.css";
 import ResumeHeader from "./ResumeHeader";
 import ResumeMain from "./ResumeMain";
 import ResumeHeaderForm from "./ResumeHeaderForm";
-import ResumeMainForm from "./ResumeMainForm";
+import ResumeEducationForm from "./ResumeEducationForm";
 
 function App() {
   const [personalInformation, setPersonalInformation] = useState({
@@ -22,22 +22,6 @@ function App() {
     });
   }
 
-  const [mainInformation, setMainInformation] = useState({
-    school: "School",
-    degree: "Degree",
-    schoolStartDate: "07/10/2024",
-    schoolEndDate: "present",
-  });
-
-  function handleMainInfo(e) {
-    let { id, value } = e.target;
-
-    setMainInformation({
-      ...mainInformation,
-      [id]: value,
-    });
-  }
-
   const [activeForm, setActiveForm] = useState(null);
 
   function changeActiveForm(e) {
@@ -50,6 +34,13 @@ function App() {
     }
   }
 
+  const [openForm, setOpenForm] = useState(1);
+
+  function handleOpenForm(e) {
+    const targetID = Number(e.target.id);
+    openForm === targetID ? setOpenForm(null) : setOpenForm(targetID);
+  }
+
   return (
     <>
       <section className="resumeForm">
@@ -60,17 +51,15 @@ function App() {
           changeActiveForm={changeActiveForm}
           id={0}
         />
-        <ResumeMainForm
-          mainInformation={mainInformation}
-          handleMainInfo={handleMainInfo}
-          isActive={activeForm === 1}
-          changeActiveForm={changeActiveForm}
-          id={1}
+        <ResumeEducationForm
+          isOpen={openForm === 1}
+          setOpenForm={handleOpenForm}
         />
+        <h1>Does this text move?</h1>
       </section>
       <section className="resume">
         <ResumeHeader personalInformation={personalInformation} />
-        <ResumeMain mainInformation={mainInformation} />
+        <ResumeMain />
       </section>
     </>
   );
