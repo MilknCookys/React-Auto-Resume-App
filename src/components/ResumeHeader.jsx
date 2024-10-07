@@ -1,11 +1,11 @@
-export default function ResumeHeader({ fullName, email, phone, address }) {
+export default function ResumeHeader({ personalInformation }) {
   return (
     <header className="resumeHeader">
-      <h1>{fullName}</h1>
+      <h1>{personalInformation.fullName}</h1>
       <section className="contactDetails">
-        <h3>jett.p.baker@gmail.com</h3>
-        <h3>0474 648 098</h3>
-        <h3>163 Newman Road Geebung</h3>
+        <h3>{personalInformation.email}</h3>
+        <h3>{personalInformation.phone}</h3>
+        <h3>{personalInformation.address}</h3>
       </section>
     </header>
   );

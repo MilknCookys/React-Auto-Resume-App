@@ -1,0 +1,73 @@
+form {
+  padding: 1rem 2rem;
+  background-color: white;
+  border-radius: 10px;
+
+  width: max-content;
+}
+
+.formHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 4rem;
+}
+
+.mainHeaderIcon {
+  /* transform: scale(0.12); */
+  width: 50px;
+  height: auto;
+}
+
+.dropDownIcon {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+
+  transition: transform 0.5s ease;
+}
+
+.rotated {
+  transform: rotateZ(180deg);
+}
+
+input {
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 7px;
+  padding: 0.4rem 0.4rem;
+}
+
+input:focus {
+  outline: 2px solid #5b7674;
+}
+
+.inputs {
+  opacity: 1;
+  height: 21.5rem;
+  transform: translateY(0);
+  transition: opacity, transform, visibility, height, 0.5s ease;
+
+  visibility: visible;
+
+  padding-top: 2.5rem;
+}
+
+.hidden {
+  height: 0 !important;
+  padding: 0 !important;
+  opacity: 0 !important;
+
+  position: relative;
+  transform: translateY(-25px);
+
+  transform-origin: top;
+  visibility: hidden;
+}
+
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}

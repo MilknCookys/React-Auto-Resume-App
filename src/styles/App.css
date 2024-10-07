@@ -1,5 +1,7 @@
 .resume {
-  max-width: 60%;
+  background-color: white;
+
+  max-width: 55%;
   min-height: 90vh;
   overflow-y: auto;
 
@@ -8,6 +10,12 @@
   box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.1),
     0 8px 16px -8px rgba(0, 0, 0, 0.25);
   /* box-shadow: ; */
+}
+
+/* Resume Form */
+
+.resumeForm {
+  /* background-color: white; */
 }
 
 /* Resume Header */

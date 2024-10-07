@@ -1,14 +1,18 @@
-export default function ResumeMain() {
+export default function ResumeMain({ mainInformation }) {
   return (
     <main className="resumeMain">
       <section className="resumeMainEducation">
         <h3 className="resumeMainHeading">Education</h3>
         <div className="resumeMainContent">
           <div>
-            <h4>London City University</h4>
-            <p>08/2019 - 09/2024</p>
+            <h4>{mainInformation.school}</h4>
+
+            <p>
+              <span>{mainInformation.schoolStartDate}</span> -{" "}
+              <span>{mainInformation.schoolEndDate}</span>
+            </p>
           </div>
-          <p>Bachelors in Economics</p>
+          <p>{mainInformation.degree}</p>
         </div>
       </section>
       <section className="resumeMainExperience">

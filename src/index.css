@@ -76,12 +76,13 @@ body {
 
   padding: 5vh 10vw;
 
-  background-color: rgb(254, 254, 254);
+  background-color: rgb(235, 235, 235);
 }
 
 #root {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 3rem;
 }
 
 @media (max-width: 1000px) {
