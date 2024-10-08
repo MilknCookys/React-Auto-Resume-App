@@ -1,22 +1,20 @@
 .formDropDown {
-  transition: height 0.5s ease;
-  height: 6rem;
+  transition: min-height 0.75s ease;
+  min-height: 5.125rem;
   margin-top: 10px;
   border-radius: 10px;
-
-  /* 
-  display: flex;
-  flex-direction: column; */
 }
 
 .formDropDown.open {
-  /* height: calc(4rem + 6rem); */
-  height: 22rem;
+  min-height: 15rem;
   overflow-y: hidden;
+  border-radius: 10px;
 }
 
 .formDropDown.closed {
+  min-height: 5.125rem;
   overflow-y: hidden;
+  border-radius: 10px;
 }
 
 .formDropDownHeader {
@@ -24,7 +22,6 @@
 
   position: relative;
 
-  /* margin-top: 10px; */
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -48,13 +45,16 @@
 }
 
 .formDropDownContent {
-  padding: 2rem 2rem;
-  /* padding-bottom: 2rem; */
+  /* padding: 2rem 2rem; */
+  width: 100%;
+
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  /* overflow-y: hidden; */
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #ebebeb;
+
   position: relative;
   z-index: 1;
 
@@ -62,14 +62,17 @@
 
   opacity: 1;
 
-  transition: transform 0.75s ease, max-height 0.75s ease;
+  transition: transform 0.6s ease, max-height 0.6s ease;
 }
 
 .formDropDownContent.open {
   /* max-height: 4rem; */
 
-  transform: translateY(-1rem);
+  /* padding: 1rem 2rem; */
+  margin-top: 0.5rem;
+  transform: translateY(-0rem);
   opacity: 1;
+  border-radius: 10px;
 }
 
 .dropDownForm {
@@ -94,8 +97,3 @@
   flex-direction: row;
   gap: 1rem;
 }
-
-/* .testForm {
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-} */

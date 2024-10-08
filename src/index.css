@@ -81,6 +81,7 @@ body {
 
 #root {
   display: flex;
+
   justify-content: space-around;
   gap: 3rem;
 }
@@ -97,6 +98,10 @@ body {
   .resume {
     max-width: fit-content;
     max-height: fit-content;
+  }
+
+  .resumeForm {
+    max-width: 100%;
   }
 }
 

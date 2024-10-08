@@ -1,7 +1,14 @@
 import FormDropDown from "./FormDropdown";
 import EducationFormDropDownContent from "./EducationFormDropDownContent";
 
-export default function ResumeEducationForm({ isOpen, setOpenForm }) {
+export default function ResumeEducationForm({
+  isOpen,
+  setOpenForm,
+  educationComponents,
+  handleEducationComponents,
+  deleteEducationComponent,
+  newEducationComponent,
+}) {
   return (
     <FormDropDown
       mainIcon={
@@ -24,6 +31,10 @@ export default function ResumeEducationForm({ isOpen, setOpenForm }) {
       isOpen={isOpen}
       setOpenForm={setOpenForm}
       DropDownContent={EducationFormDropDownContent}
+      educationComponents={educationComponents}
+      handleEducationComponents={handleEducationComponents}
+      deleteEducationComponent={deleteEducationComponent}
+      newEducationComponent={newEducationComponent}
     />
   );
 }

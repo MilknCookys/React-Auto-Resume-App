@@ -6,10 +6,10 @@ export default function FormDropDown({
   isOpen,
   setOpenForm,
   DropDownContent,
-  educationComponents,
-  handleEducationComponents,
-  deleteEducationComponent,
-  newEducationComponent,
+  experienceComponents,
+  handleExperienceComponents,
+  deleteExperienceComponent,
+  newExperienceComponent,
 }) {
   return (
     <div className={`formDropDown ${isOpen ? "open" : "closed"}`}>
@@ -25,7 +25,7 @@ export default function FormDropDown({
           strokeWidth={2}
           stroke="currentColor"
           className={`dropDownIcon ${isOpen && "rotated"}`}
-          id="1"
+          id="2"
           onClick={setOpenForm}
         >
           <path
@@ -37,10 +37,10 @@ export default function FormDropDown({
       </div>
       <div className={`formDropDownContent ${isOpen ? "open" : "closed"}`}>
         <DropDownContent
-          educationComponents={educationComponents}
-          handleEducationComponents={handleEducationComponents}
-          deleteEducationComponent={deleteEducationComponent}
-          newEducationComponent={newEducationComponent}
+          experienceComponents={experienceComponents}
+          handleExperienceComponents={handleExperienceComponents}
+          deleteExperienceComponent={deleteExperienceComponent}
+          newExperienceComponent={newExperienceComponent}
         />
       </div>
     </div>
