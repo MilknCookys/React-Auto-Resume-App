@@ -55,7 +55,7 @@ function App() {
           isOpen={openForm === 1}
           setOpenForm={handleOpenForm}
         />
-        <h1>Does this text move?</h1>
+        {/* <h1>Does this text move?</h1> */}
       </section>
       <section className="resume">
         <ResumeHeader personalInformation={personalInformation} />

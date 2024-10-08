@@ -1,10 +1,22 @@
 .formDropDown {
   transition: height 0.5s ease;
   height: 6rem;
+  margin-top: 10px;
+  border-radius: 10px;
+
+  /* 
+  display: flex;
+  flex-direction: column; */
 }
 
 .formDropDown.open {
-  height: calc(1rem + 4rem + 6rem);
+  /* height: calc(4rem + 6rem); */
+  height: 22rem;
+  overflow-y: hidden;
+}
+
+.formDropDown.closed {
+  overflow-y: hidden;
 }
 
 .formDropDownHeader {
@@ -12,7 +24,7 @@
 
   position: relative;
 
-  margin-top: 10px;
+  /* margin-top: 10px; */
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -36,23 +48,54 @@
 }
 
 .formDropDownContent {
-  padding: 1rem 2rem;
-
-  /* position: relative; */
+  padding: 2rem 2rem;
+  /* padding-bottom: 2rem; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  /* overflow-y: hidden; */
+  position: relative;
   z-index: 1;
 
-  visibility: hidden;
-  transform: translateY(-3rem);
+  transform: translateY(-20rem);
 
   opacity: 1;
 
-  transition: position, transform 0.5s ease;
+  transition: transform 0.75s ease, max-height 0.75s ease;
 }
 
 .formDropDownContent.open {
-  visibility: visible;
-  max-height: 4rem;
-  transform: translateY(1rem);
+  /* max-height: 4rem; */
+
+  transform: translateY(-1rem);
   opacity: 1;
-  background-color: rgb(255, 0, 0);
 }
+
+.dropDownForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.endDate,
+.startDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.formDates {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* .testForm {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+} */

@@ -7,7 +7,7 @@ export default function ResumeHeaderForm({
   changeActiveForm,
 }) {
   return (
-    <form>
+    <form className="resumeHeaderForm">
       <header className="formHeader">
         <svg
           xmlns="http://www.w3.org/2000/svg"
