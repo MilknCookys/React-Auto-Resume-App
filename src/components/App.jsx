@@ -58,8 +58,8 @@ function App() {
   }
 
   function deleteEducationComponent(e) {
-    const { id, value } = e.target;
-    console.log({ id, value });
+    // const { id, value } = e.target;
+    // console.log({ id, value });
 
     const targetIndex = educationComponents.findIndex(
       (component) =>
@@ -123,7 +123,6 @@ function App() {
   }
 
   function deleteExperienceComponent(e) {
-    console.log("Deleting");
     const targetElement = e.target.closest(".experienceComponent");
 
     const targetIndex = experienceComponents.findIndex(
@@ -156,7 +155,7 @@ function App() {
 
   function changeActiveForm(e) {
     const clickedId = Number(e.target.id);
-    console.log(clickedId);
+    // console.log(clickedId);
     if (activeForm === clickedId) {
       setActiveForm(null);
     } else {

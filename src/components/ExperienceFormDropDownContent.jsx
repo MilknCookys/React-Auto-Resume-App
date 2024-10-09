@@ -15,7 +15,7 @@ export default function ExperienceFormDropDownContent({
             id={component.key}
             experienceComponent={component}
             handleExperienceComponents={handleExperienceComponents}
-            deleteExperienceComponents={deleteExperienceComponent}
+            deleteExperienceComponent={deleteExperienceComponent}
           />
         );
       })}

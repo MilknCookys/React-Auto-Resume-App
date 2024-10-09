@@ -12,7 +12,7 @@ export default function FormDropDown({
   newEducationComponent,
 }) {
   return (
-    <div className={`formDropDown ${isOpen ? "open" : "closed"}`}>
+    <div className={`formDropDown ${isOpen ? "open" : null}`}>
       <div className="formDropDownHeader">
         <>{mainIcon}</>
 

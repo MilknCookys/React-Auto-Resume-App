@@ -1,21 +1,33 @@
 .formDropDown {
-  transition: min-height 0.75s ease;
-  min-height: 5.125rem;
+  /* this was min height previously and worked a bit differently - may want to change back */
+
+  /* transition: max-height 0.75s ease; */
+
+  /* max-height: 5.125rem; */
+
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+  max-height: 5.125rem;
   margin-top: 10px;
   border-radius: 10px;
 }
 
 .formDropDown.open {
-  min-height: 15rem;
-  overflow-y: hidden;
-  border-radius: 10px;
+  /* max-height: 15rem; */
+  max-height: 40rem;
+  /* overflow-y: hidden; */
+  /* border-radius: 10px; */
+  transition: max-height 1s ease-in;
 }
 
-.formDropDown.closed {
-  min-height: 5.125rem;
+/* .formDropDown.closed {
+  max-height: 5.125rem;
+   max-height: 100%; 
   overflow-y: hidden;
   border-radius: 10px;
-}
+
+  transition: max-height 3s linear;
+} */
 
 .formDropDownHeader {
   max-height: 6rem;
@@ -58,11 +70,15 @@
   position: relative;
   z-index: 1;
 
-  transform: translateY(-20rem);
+  /* transform: translateY(-20rem); */
+  transform: translateY(-18rem);
 
   opacity: 1;
 
-  transition: transform 0.6s ease, max-height 0.6s ease;
+  /* transition: transform 0.6s ease, max-height 0.6s ease; */
+
+  /* transition: transform 5s ease, max-height 5s ease; */
+  transition: transform 1s ease-in-out;
 }
 
 .formDropDownContent.open {
